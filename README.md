@@ -1,10 +1,8 @@
-RubyFaction
-=================
+# RubyFaction
 
 Implementação em Ruby da [API do Webfaction](https://docs.webfaction.com/xmlrpc-api/).
 
-Instalação
-------------
+## Instalação
 
 Você pode instalar no seu sistema diretamente usando o seguinte comando:
 
@@ -24,10 +22,9 @@ Depois basta importar a biblioteca no seu script.
 require 'rubyfaction'
 ```
 
-Exemplos
-------------
+## Exemplos
 
-#### Criando um novo cliente
+### Criando um novo cliente
 
 ```ruby
 wf = Rubyfaction::Client.new(
@@ -39,7 +36,7 @@ wf = Rubyfaction::Client.new(
 
 O parâmetro `machine` é opcional para contas com mais de uma máquina.
 
-#### Tentar novamente automaticamente em timeouts
+### Tentar novamente automaticamente em timeouts
 
 Quando criar um cliente, você pode inserir a opção `retry_timeouts: true`
 para capturar as exceptions `Timeout::Error` e `Net::ReadTimeout` e tentar
@@ -54,7 +51,7 @@ wf = Rubyfaction::Client.new(
 )
 ```
 
-#### Listando seus domínios
+### Listando seus domínios
 
 ```ruby
 wf.list_domains
@@ -67,7 +64,7 @@ wf.list_domains
     }]
 ```
 
-#### Criando um mailbox
+### Criando um mailbox
 
 ```ruby
 wf.create_mailbox(mailbox: "your_new_mailbox", enable_spam_protection: false)
@@ -81,8 +78,7 @@ wf.create_mailbox(mailbox: "your_new_mailbox", enable_spam_protection: false)
    }
 ```
 
-Contribuindo
-------------
+## Contribuindo
 
 Pull requests são bem-vindas.
 
@@ -97,8 +93,7 @@ sugeriu a feature.
 * Escreva os testes para seu bugfix/feature.
 * Mande um pull request.
 
-Testando
-------------
+## Testando
 
 Os testes precisam que as seguintes variáveis de ambiente estejam configuradas:
 
@@ -115,8 +110,7 @@ WEBFACTION_PASSWORD=webfaction_password
 O .env não será incluido nos seus commits. O RSpec configurará as variáveis de
 ambiente para você.
 
-Créditos
--------
+## Créditos
 
 ![codefarm](https://codefarm.com.br/img/logo2.png)
 
@@ -124,7 +118,6 @@ Rubyfaction é mantido por [Code Farm](https://codefarm.com.br/). Baseado
 no [Rubypress](https://github.com/zachfeldman/rubypress) do
 [@zachfeldman](https://github.com/zachfeldman).
 
-Licença
--------
+## Licença
 
-Rubyfaction é © 2016 Code Farm. Eles são distribuidos sob a GPLv2.
+© 2016 Code Farm. Distribuido sob a GPLv2.
